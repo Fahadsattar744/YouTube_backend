@@ -2,9 +2,10 @@
   "name": "youtube_backend",
   "version": "1.0.0",
   "description": "A backend for youtube",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js"
   },
   "keywords": [
     "javasacript",
@@ -15,6 +16,7 @@
   "author": "Fahad Sattar",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.1.2"
+    "nodemon": "^3.1.2",
+    "prettier": "^3.3.0"
   }
 }
