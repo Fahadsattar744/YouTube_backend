@@ -4,10 +4,20 @@ import dotenv, { config } from "dotenv"
 import mongoose from "mongoose";
 import { DB_NAME } from "./constants.js";
 import connectDB from "./db/index.js";
+import e from "express";
 
 dotenv,config({path:'./env'}) 
 
-connectDB()
+connectDB().then(
+()=>{
+    app.listen(process.env.PORT || 8000,()=>{
+        console.log(`server is runing on ${process.env.PORT}`)
+    })
+}
+
+).catch((err) => {
+    console.log("mondoDB conncetion failed!!",err)
+})
 
 
 /*
